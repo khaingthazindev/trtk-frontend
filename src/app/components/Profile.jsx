@@ -1,12 +1,11 @@
-export default function Profile() {
-   let name = "Someone";
+export default function Profile({profile, size = 100}) {
    return (<div>
-      <h3>{name}</h3>
+      <h3>{profile.name}</h3>
       <img
-         src="https://react.dev/images/docs/scientists/MK3eW3Am.jpg"
+         src={profile.image}
          alt="Katherine Johnson"
-         width={100}
-         height={100}
+         width={size}
+         height={size}
          className={'profile'}
       />
    </div>)
