@@ -1,4 +1,6 @@
 import UserAccount from "@/app/components/conditional_render/UserAccount";
+import ItemList from "@/app/components/list/ItemList";
+import TodoListDemo from "@/app/components/list/TodoListDemo";
 
 export default function Home() {
   return (
@@ -30,7 +32,11 @@ export default function Home() {
        {/*   }}*/}
        {/*   label={'Some Message'} />*/}
 
-       <UserAccount role={'admin'} />
+       {/*<UserAccount role={'admin'} />*/}
+
+       {/*<ItemList items={['Apple', 'Orange', 'Banana']} />*/}
+
+       <TodoListDemo />
     </div>
   );
 }
