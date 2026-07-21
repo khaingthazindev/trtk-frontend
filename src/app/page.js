@@ -1,4 +1,4 @@
-import NestedComponent from "@/app/components/NestedComponent";
+import UserAccount from "@/app/components/conditional_render/UserAccount";
 
 export default function Home() {
   return (
@@ -23,12 +23,14 @@ export default function Home() {
        {/*   <h2>How are you?</h2>*/}
        {/*</Border>*/}
 
-       <NestedComponent
-          style={{
-             backgroundColor: 'blue',
-             color: 'white',
-          }}
-          label={'Some Message'} />
+       {/*<NestedComponent*/}
+       {/*   style={{*/}
+       {/*      backgroundColor: 'blue',*/}
+       {/*      color: 'white',*/}
+       {/*   }}*/}
+       {/*   label={'Some Message'} />*/}
+
+       <UserAccount role={'admin'} />
     </div>
   );
 }
