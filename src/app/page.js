@@ -1,5 +1,4 @@
-import Profile from "@/app/components/Profile";
-import Border from "@/app/components/Border";
+import NestedComponent from "@/app/components/NestedComponent";
 
 export default function Home() {
   return (
@@ -13,16 +12,23 @@ export default function Home() {
        {/*   'image': 'https://i.pinimg.com/736x/0b/97/6f/0b976f0a7aa1aa43870e1812eee5a55d.jpg'*/}
        {/*}} />*/}
 
-       <Border>
-          <Profile profile={{
-             'name': 'Thazin',
-             'image': 'https://i.pinimg.com/736x/8c/6d/db/8c6ddb5fe6600fcc4b183cb2ee228eb7.jpg'
-          }} size={70} />
-       </Border>
-       <Border>
-          <h2>Hello</h2>
-          <h2>How are you?</h2>
-       </Border>
+       {/*<Border>*/}
+       {/*   <Profile profile={{*/}
+       {/*      'name': 'Thazin',*/}
+       {/*      'image': 'https://i.pinimg.com/736x/8c/6d/db/8c6ddb5fe6600fcc4b183cb2ee228eb7.jpg'*/}
+       {/*   }} size={70} />*/}
+       {/*</Border>*/}
+       {/*<Border>*/}
+       {/*   <h2>Hello</h2>*/}
+       {/*   <h2>How are you?</h2>*/}
+       {/*</Border>*/}
+
+       <NestedComponent
+          style={{
+             backgroundColor: 'blue',
+             color: 'white',
+          }}
+          label={'Some Message'} />
     </div>
   );
 }
