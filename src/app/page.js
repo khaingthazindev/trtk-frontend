@@ -6,6 +6,7 @@ import EventPropagationDemo from "@/app/components/EventPropagationDemo";
 import Counter from "@/app/components/Counter";
 import CustomTabDemo from "@/app/components/tab/CustomTabDemo";
 import StateProblem1 from "@/app/components/state/StateProblem1";
+import UpdateObject from "@/app/components/state/UpdateObject";
 
 export default function Home() {
   return (
@@ -57,7 +58,9 @@ export default function Home() {
 
        {/*<CustomTabDemo />*/}
 
-       <StateProblem1 />
+       {/*<StateProblem1 />*/}
+
+       <UpdateObject />
     </div>
   );
 }
