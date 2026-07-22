@@ -1,6 +1,8 @@
 import UserAccount from "@/app/components/conditional_render/UserAccount";
 import ItemList from "@/app/components/list/ItemList";
 import TodoListDemo from "@/app/components/list/TodoListDemo";
+import CustomButtonDemo from "@/app/components/CustomButtonDemo";
+import EventPropagationDemo from "@/app/components/EventPropagationDemo";
 
 export default function Home() {
   return (
@@ -36,7 +38,11 @@ export default function Home() {
 
        {/*<ItemList items={['Apple', 'Orange', 'Banana']} />*/}
 
-       <TodoListDemo />
+       {/*<TodoListDemo />*/}
+
+       {/*<CustomButtonDemo />*/}
+
+       <EventPropagationDemo />
     </div>
   );
 }
