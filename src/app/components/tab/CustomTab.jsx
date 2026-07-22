@@ -9,6 +9,7 @@ function TabHeader({header, onClick}) {
 }
 
 export default function CustomTab({headers, children}) {
+   console.log('CustomTab Render...');
    const [activeTab, setActiveTab] = useState(0);
 
    const onClickHandler = (index) => {

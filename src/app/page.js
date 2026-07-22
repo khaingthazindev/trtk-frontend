@@ -5,6 +5,7 @@ import CustomButtonDemo from "@/app/components/CustomButtonDemo";
 import EventPropagationDemo from "@/app/components/EventPropagationDemo";
 import Counter from "@/app/components/Counter";
 import CustomTabDemo from "@/app/components/tab/CustomTabDemo";
+import StateProblem1 from "@/app/components/state/StateProblem1";
 
 export default function Home() {
   return (
@@ -54,7 +55,9 @@ export default function Home() {
        <Counter />
        */}
 
-       <CustomTabDemo />
+       {/*<CustomTabDemo />*/}
+
+       <StateProblem1 />
     </div>
   );
 }
