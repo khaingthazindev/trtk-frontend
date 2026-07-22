@@ -7,6 +7,7 @@ import Counter from "@/app/components/Counter";
 import CustomTabDemo from "@/app/components/tab/CustomTabDemo";
 import StateProblem1 from "@/app/components/state/StateProblem1";
 import UpdateObject from "@/app/components/state/UpdateObject";
+import UpdateArray from "@/app/components/state/UpdateArray";
 
 export default function Home() {
   return (
@@ -60,7 +61,9 @@ export default function Home() {
 
        {/*<StateProblem1 />*/}
 
-       <UpdateObject />
+       {/*<UpdateObject />*/}
+
+       <UpdateArray />
     </div>
   );
 }
