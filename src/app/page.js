@@ -3,10 +3,12 @@ import ItemList from "@/app/components/list/ItemList";
 import TodoListDemo from "@/app/components/list/TodoListDemo";
 import CustomButtonDemo from "@/app/components/CustomButtonDemo";
 import EventPropagationDemo from "@/app/components/EventPropagationDemo";
+import Counter from "@/app/components/Counter";
+import CustomTabDemo from "@/app/components/tab/CustomTabDemo";
 
 export default function Home() {
   return (
-    <div>
+    <div style={{margin: '10px auto'}}>
        {/*<Profile profile={{*/}
        {/*   'name': 'Thazin',*/}
        {/*   'image': 'https://i.pinimg.com/736x/8c/6d/db/8c6ddb5fe6600fcc4b183cb2ee228eb7.jpg'*/}
@@ -42,7 +44,17 @@ export default function Home() {
 
        {/*<CustomButtonDemo />*/}
 
-       <EventPropagationDemo />
+       {/*<EventPropagationDemo />*/}
+
+       {/*
+       <Counter />
+
+       <h3>Another Counter</h3>
+
+       <Counter />
+       */}
+
+       <CustomTabDemo />
     </div>
   );
 }
