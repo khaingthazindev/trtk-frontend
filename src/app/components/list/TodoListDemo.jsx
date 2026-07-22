@@ -1,7 +1,12 @@
+'use client';
+
 function Todo(props) {
+   const onClickHandler = (e) => {
+      console.log('Todo onClickHandler e: ', e)
+   }
    return <div>
       {props.todo.title}
-      <button type={"button"}>Delete</button>
+      <button type={"button"} onClick={onClickHandler}>Delete</button>
    </div>;
 }
 
