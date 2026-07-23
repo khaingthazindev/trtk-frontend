@@ -9,6 +9,7 @@ import StateProblem1 from "@/app/components/state/StateProblem1";
 import UpdateObject from "@/app/components/state/UpdateObject";
 import UpdateArray from "@/app/components/state/UpdateArray";
 import ShoppingCart from "@/app/components/input/ShoppingCart";
+import TodoListWithReducer from "@/app/components/reducer/TodoListWithReducer";
 
 export default function Home() {
   return (
@@ -64,9 +65,11 @@ export default function Home() {
 
        {/*<UpdateObject />*/}
 
-       <UpdateArray />
+       {/*<UpdateArray />*/}
 
        {/*<ShoppingCart />*/}
+
+       <TodoListWithReducer />
     </div>
   );
 }
