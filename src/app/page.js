@@ -10,6 +10,8 @@ import UpdateObject from "@/app/components/state/UpdateObject";
 import UpdateArray from "@/app/components/state/UpdateArray";
 import ShoppingCart from "@/app/components/input/ShoppingCart";
 import TodoListWithReducer from "@/app/components/reducer/TodoListWithReducer";
+import ThemeContextDemo from "@/app/components/context/ThemeContextDemo";
+import TodoWithReducerAndContext from "@/app/components/context/TodoWithReducerAndContext";
 
 export default function Home() {
   return (
@@ -69,7 +71,11 @@ export default function Home() {
 
        {/*<ShoppingCart />*/}
 
-       <TodoListWithReducer />
+       {/*<TodoListWithReducer />*/}
+
+       {/*<ThemeContextDemo />*/}
+
+       <TodoWithReducerAndContext />
     </div>
   );
 }

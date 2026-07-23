@@ -1,20 +1,7 @@
 'use client';
 
-import {useContext, useReducer, useState} from "react";
-import {TodoDispatchContext, TodosContext} from "@/app/components/context/TodoContext";
-
-export function todoReducer(state, action) {
-   switch (action.type) {
-      case 'ADD_TODO':
-         return [...state, action.payload]; break;
-      case 'UPDATE_TODO':
-         return state.map(td => td.id === action.payload.id ? action.payload : td); break;
-      case 'DELETE_TODO':
-         return state.filter(td => td.id !== action.payload.id); break;
-      default:
-         return [...state];
-   }
-}
+import {useReducer, useState} from "react";
+import {todoReducer} from "@/app/components/reducer/TodoListWithReducer";
 
 let initialTodos = [
    {
@@ -51,10 +38,8 @@ let initialTodos = [
 
 let id = 6;
 
-function TodoEntry()
+function TodoEntry({onSave})
 {
-   const dispatch = useContext(TodoDispatchContext);
-
    const [name, setName] = useState('');
    let newTodo = {
       "userId": 1,
@@ -64,10 +49,7 @@ function TodoEntry()
    }
 
    const handleSave = () => {
-      dispatch({
-         type: 'ADD_TODO',
-         payload: newTodo
-      })
+      onSave(newTodo);
       setName('');
    }
 
@@ -81,9 +63,8 @@ function TodoEntry()
    </div>;
 }
 
-function Todo({todo})
+function Todo({todo, onDelete, onUpdate})
 {
-   const dispatch = useContext(TodoDispatchContext);
    const [isUpdating, setIsUpdating] = useState(false);
    const [name, setName] = useState(todo.title);
 
@@ -93,16 +74,10 @@ function Todo({todo})
          ...todo,
          title: name
       };
-      dispatch({
-         type: 'UPDATE_TODO',
-         payload: updated
-      })
+      onUpdate(updated);
    }
    const handleDelete = (e) => {
-      dispatch({
-         type: 'DELETE_TODO',
-         payload: todo
-      })
+      onDelete(todo);
    }
 
    return <div>
@@ -116,33 +91,46 @@ function Todo({todo})
    </div>;
 }
 
-function TodoList({onDelete, onUpdate})
+function TodoList({todos, onDelete, onUpdate})
 {
-   const todos = useContext(TodosContext);
    return (<div>
-      {todos.map((todo) => <Todo key={todo.id} todo={todo} /> )}
+      {todos.map((todo) => <Todo key={todo.id} todo={todo} onDelete={onDelete} onUpdate={onUpdate} /> )}
    </div>)
 }
 
-function TodoCount()
+function TodoCount({count})
 {
-   const todos = useContext(TodosContext);
    return (<div>
-      <h3>Todo count: {todos.length}</h3>
+      <h3>Todo count: {count}</h3>
    </div>)
 }
 
-export default function TodoListWithReducer()
+export default function TodoWithReducerAndContext()
 {
    const [todos, dispatch] = useReducer(todoReducer, initialTodos);
 
+   const handleDelete = (todo) => {
+      dispatch({
+         type: 'DELETE_TODO',
+         payload: todo
+      })
+   }
+   const handleSave = (todo) => {
+      dispatch({
+         type: 'ADD_TODO',
+         payload: todo
+      })
+   }
+   const handleUpdate = (todo) => {
+      dispatch({
+         type: 'UPDATE_TODO',
+         payload: todo
+      })
+   }
+
    return (<div>
-      <TodosContext.Provider value={todos}>
-         <TodoDispatchContext.Provider value={dispatch}>
-            <TodoCount />
-            <TodoEntry />
-            <TodoList />
-         </TodoDispatchContext.Provider>
-      </TodosContext.Provider>
+      <TodoCount count={todos.length} />
+      <TodoEntry onSave={handleSave} />
+      <TodoList todos={todos} onDelete={handleDelete} onUpdate={handleUpdate} />
    </div>)
 }
