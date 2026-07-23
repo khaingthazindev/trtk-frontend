@@ -64,9 +64,9 @@ export default function Home() {
 
        {/*<UpdateObject />*/}
 
-       {/*<UpdateArray />*/}
+       <UpdateArray />
 
-       <ShoppingCart />
+       {/*<ShoppingCart />*/}
     </div>
   );
 }

@@ -23,14 +23,43 @@ function Artist({artist, onDelete, onUpdate}) {
             : <button type={"button"} onClick={onEditHandler}>Edit</button>
       }
 
-      <button type={"button"} onClick={onDelete}>Delete</button>
+      <button type={"button"} onClick={() => onDelete(artist.id)}>Delete</button>
+   </div>;
+}
+
+function ArtistList({artists, onDelete, onUpdate}) {
+   return <div>
+      {artists.map(artist => (
+         <Artist key={artist.id} artist={artist} onDelete={onDelete} onUpdate={onUpdate}/>
+      ))}
+   </div>;
+}
+
+function ArtistEntry({onSave}) {
+   const [name, setName] = useState('');
+   let newArtist = {
+      name
+   }
+   return <div>
+      <input
+         value={name}
+         onChange={(e) => setName(e.target.value)}
+      />
+      <button onClick={() => onSave(newArtist)}>Add
+      </button>
    </div>;
 }
 
 export default function UpdateArray() {
-   const [name, setName] = useState('');
    const [artists, setArtists] = useState([]);
 
+   const onSaveHandler = (artist) => {
+      let newArtist = {
+         ...artist,
+         id: artists.length + 1
+      };
+      setArtists([...artists, newArtist]);
+   }
    const onDeleteHandler = (artistId) => {
       setArtists([...artists.filter(artist => artist.id !== artistId)]);
    }
@@ -42,22 +71,10 @@ export default function UpdateArray() {
    return (
       <>
          <h1>Inspiring sculptors:</h1>
-         <input
-            value={name}
-            onChange={e => setName(e.target.value)}
-         />
-         <button onClick={() => {
-            setArtists([
-               ...artists,
-               {id: artists.length + 1, name: name}
-            ]);
-            setName('');
-         }}>Add
-         </button>
-         {artists.map(artist => (
-            <Artist key={artist.id} artist={artist} onDelete={() => onDeleteHandler(artist.id)}
-                    onUpdate={onUpdateHandler}/>
-         ))}
+         <ArtistEntry onSave={onSaveHandler} />
+
+         <ArtistList artists={artists} onDelete={onDeleteHandler}
+                     onUpdate={onUpdateHandler}/>
       </>
    );
 }
