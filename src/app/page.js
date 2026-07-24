@@ -12,6 +12,7 @@ import ShoppingCart from "@/app/components/input/ShoppingCart";
 import TodoListWithReducer from "@/app/components/reducer/TodoListWithReducer";
 import ThemeContextDemo from "@/app/components/context/ThemeContextDemo";
 import TodoWithReducerAndContext from "@/app/components/context/TodoWithReducerAndContext";
+import FilterableProductTable from "@/app/product/FilterableProductTable";
 
 export default function Home() {
   return (
@@ -75,7 +76,9 @@ export default function Home() {
 
        {/*<ThemeContextDemo />*/}
 
-       <TodoWithReducerAndContext />
+       {/*<TodoWithReducerAndContext />*/}
+
+       <FilterableProductTable />
     </div>
   );
 }
