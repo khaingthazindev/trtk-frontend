@@ -11,6 +11,12 @@ importers:
       classnames:
         specifier: ^2.5.1
         version: 2.5.1
+      jquery:
+        specifier: ^4.0.0
+        version: 4.0.0
+      jquery-datepicker:
+        specifier: ^1.12.3
+        version: 1.12.3
       next:
         specifier: 16.2.10
         version: 16.2.10(@babel/core@7.29.7(supports-color@7.2.0))(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -1261,6 +1267,12 @@ packages:
   iterator.prototype@1.1.5:
     resolution: {integrity: sha512-H0dkQoCa3b2VEeKQBOxFph+JAbcrQdE7KC0UkqwpLmv2EC4P41QXP+rqo9wYodACiG5/WM5s9oDApTU8utwj9g==}
     engines: {node: '>= 0.4'}
+
+  jquery-datepicker@1.12.3:
+    resolution: {integrity: sha512-dj140t4syBKTLOvqnDJ/x03u9HcoatvX99t5IY/0IfEtxDtJAxB2VBCAZehbtHJg9Sb7YdC6/2BnGFk1pr/SgA==}
+
+  jquery@4.0.0:
+    resolution: {integrity: sha512-TXCHVR3Lb6TZdtw1l3RTLf8RBWVGexdxL6AC8/e0xZKEpBflBsjh9/8LXw+dkNFuOyW9B7iB3O1sP7hS0Kiacg==}
 
   js-tokens@4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
@@ -3132,6 +3144,10 @@ snapshots:
       get-proto: 1.0.1
       has-symbols: 1.1.0
       set-function-name: 2.0.2
+
+  jquery-datepicker@1.12.3: {}
+
+  jquery@4.0.0: {}
 
   js-tokens@4.0.0: {}
 

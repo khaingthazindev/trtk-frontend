@@ -13,6 +13,9 @@ import TodoListWithReducer from "@/app/components/reducer/TodoListWithReducer";
 import ThemeContextDemo from "@/app/components/context/ThemeContextDemo";
 import TodoWithReducerAndContext from "@/app/components/context/TodoWithReducerAndContext";
 import FilterableProductTable from "@/app/product/FilterableProductTable";
+import WhyRef from "@/app/components/ref/WhyRef";
+import FocusInput from "@/app/components/ref/FocusInput";
+import DatePicker from "@/app/components/ref/DatePicker";
 
 export default function Home() {
   return (
@@ -78,7 +81,13 @@ export default function Home() {
 
        {/*<TodoWithReducerAndContext />*/}
 
-       <FilterableProductTable />
+       {/*<FilterableProductTable />*/}
+
+       {/*<WhyRef />*/}
+
+       {/*<FocusInput />*/}
+
+       <DatePicker />
     </div>
   );
 }

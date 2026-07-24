@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "classnames": "^2.5.1",
+    "jquery": "^4.0.0",
+    "jquery-datepicker": "^1.12.3",
     "next": "16.2.10",
     "react": "19.2.4",
     "react-dom": "19.2.4"
