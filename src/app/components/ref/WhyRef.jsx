@@ -1,11 +1,13 @@
 'use client';
 
-import {useRef, useState} from "react";
+import {useState} from "react";
+import useCustomRef from "@/app/components/hook/useCustomRef";
 
 export default function WhyRef() {
    let [count, setCount] = useState(0);
    let localCount = 0;
-   let refCount = useRef(0);
+   // let refCount = useRef(0);
+   let refCount = useCustomRef(0);
 
    const handleIncreaseState = () => {
       setCount(count + 1)

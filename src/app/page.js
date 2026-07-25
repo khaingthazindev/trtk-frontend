@@ -19,6 +19,8 @@ import DatePicker from "@/app/components/ref/DatePicker";
 import WhyEffect from "@/app/components/effect/WhyEffect";
 import EffectDemo from "@/app/components/effect/EffectDemo";
 import WhyCleanup from "@/app/components/effect/WhyCleanup";
+import FetchTodo from "@/app/components/hook/FetchTodo";
+import FetchUser from "@/app/components/hook/FetchUser";
 
 export default function Home() {
   return (
@@ -96,7 +98,13 @@ export default function Home() {
 
        {/*<EffectDemo />*/}
 
-       <WhyCleanup />
+       {/*<WhyCleanup />*/}
+
+       {/*<FetchTodo />*/}
+
+       {/*<FetchUser />*/}
+
+       <WhyRef />
     </div>
   );
 }

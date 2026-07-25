@@ -1,7 +1,8 @@
 'use client';
 
-import {useContext, useReducer, useState} from "react";
+import {useContext, useState} from "react";
 import {TodoDispatchContext, TodosContext} from "@/app/components/context/TodoContext";
+import useCustomReducer from "@/app/components/hook/useCustomReducer";
 
 export function todoReducer(state, action) {
    switch (action.type) {
@@ -134,7 +135,8 @@ function TodoCount()
 
 export default function TodoListWithReducer()
 {
-   const [todos, dispatch] = useReducer(todoReducer, initialTodos);
+   // const [todos, dispatch] = useReducer(todoReducer, initialTodos);
+   const [todos, dispatch] = useCustomReducer(todoReducer, initialTodos);
 
    return (<div>
       <TodosContext.Provider value={todos}>
