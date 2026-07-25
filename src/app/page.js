@@ -16,6 +16,9 @@ import FilterableProductTable from "@/app/product/FilterableProductTable";
 import WhyRef from "@/app/components/ref/WhyRef";
 import FocusInput from "@/app/components/ref/FocusInput";
 import DatePicker from "@/app/components/ref/DatePicker";
+import WhyEffect from "@/app/components/effect/WhyEffect";
+import EffectDemo from "@/app/components/effect/EffectDemo";
+import WhyCleanup from "@/app/components/effect/WhyCleanup";
 
 export default function Home() {
   return (
@@ -87,7 +90,13 @@ export default function Home() {
 
        {/*<FocusInput />*/}
 
-       <DatePicker />
+       {/*<DatePicker />*/}
+
+       {/*<WhyEffect />*/}
+
+       {/*<EffectDemo />*/}
+
+       <WhyCleanup />
     </div>
   );
 }
