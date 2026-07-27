@@ -4,6 +4,7 @@ import {useEffect, useState} from "react";
 import useFetch from "@/app/components/hook/useFetch";
 
 export default function FetchUser() {
+
    // const [users, setUsers] = useState([]);
    // const [isLoading, setIsLoading] = useState(true);
    //

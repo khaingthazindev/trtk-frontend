@@ -1,10 +1,11 @@
-import {useEffect, useState} from "react";
+import {useDebugValue, useEffect, useState} from "react";
 
 export default function useFetch(url) {
+
+   useDebugValue(url ? url : 'no url');
+
    const [data, setData] = useState([]);
    const [isLoading, setIsLoading] = useState(true);
-
-   console.log('useFetch');
 
    useEffect(() => {
       fetch(url)

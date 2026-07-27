@@ -21,6 +21,11 @@ import EffectDemo from "@/app/components/effect/EffectDemo";
 import WhyCleanup from "@/app/components/effect/WhyCleanup";
 import FetchTodo from "@/app/components/hook/FetchTodo";
 import FetchUser from "@/app/components/hook/FetchUser";
+import CallbackHookDemo1 from "@/app/components/hook/CallbackHookDemo1";
+import CallbackHookDemo from "@/app/components/hook/CallbackHookDemo";
+import WaitPromise from "@/app/components/hook/WaitPromise";
+import SearchResultsDemo from "@/app/components/hook/SearchResultsDemo";
+import SearchDemo from "@/app/search/SearchDemo";
 
 export default function Home() {
   return (
@@ -104,7 +109,18 @@ export default function Home() {
 
        {/*<FetchUser />*/}
 
-       <WhyRef />
+       {/*<WhyRef />*/}
+
+       {/*<CallbackHookDemo1/>*/}
+
+       {/*<CallbackHookDemo />*/}
+
+       {/*<WaitPromise />*/}
+
+       {/*<SearchResultsDemo />*/}
+
+       <SearchDemo/>
+
     </div>
   );
 }
