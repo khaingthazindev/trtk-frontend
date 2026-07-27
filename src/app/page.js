@@ -26,6 +26,8 @@ import CallbackHookDemo from "@/app/components/hook/CallbackHookDemo";
 import WaitPromise from "@/app/components/hook/WaitPromise";
 import SearchResultsDemo from "@/app/components/hook/SearchResultsDemo";
 import SearchDemo from "@/app/search/SearchDemo";
+import Modal from "@/app/components/portal/Modal";
+import ModalDemo from "@/app/components/portal/ModalDemo";
 
 export default function Home() {
   return (
@@ -119,7 +121,9 @@ export default function Home() {
 
        {/*<SearchResultsDemo />*/}
 
-       <SearchDemo/>
+       {/*<SearchDemo/>*/}
+
+       <ModalDemo />
 
     </div>
   );
